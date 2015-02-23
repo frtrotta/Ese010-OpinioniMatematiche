@@ -1,3 +1,5 @@
+// v.1.0
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -20,7 +22,8 @@ int main(int argc, char** argv) {
     printf("Stampa 003: %d - 1 = %d\n", a, a-1);
     printf("Stampa 004: %d - 10 = %d\n", a, a-10);
     
-    printf("\nIl tipo di dato \"uint\" memorizza interi _senza_ segno e occupa %d byte. \"u\" sta per \"unsigned\".\n", sizeof(ushort));
+    printf("\nIl tipo di dato \"uint\" memorizza interi _senza_ segno e occupa %d byte. \"u\" sta per \"unsigned\".\n", sizeof(uint));
+    n_bit = sizeof(uint) * 8; // dimensione in bit
     ua = 123;
     printf("Stampa 100: %u + 1 = %u\n", ua, ua+1);
     ua = pow(2, n_bit) - 1;
