@@ -1,4 +1,4 @@
-// v.1.0
+// v2.0
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +7,7 @@
 int main(int argc, char** argv) {
     int n_bit;
     int a, b;
-    uint ua;
+    unsigned int ua;
     float f;
     float fa, fb;
     
@@ -16,17 +16,20 @@ int main(int argc, char** argv) {
     a = 17;
     printf("Stampa 000: %d + 1 = %d\n", a, a+1);
     a = pow(2, n_bit-1) - 1;
+    printf("====> 2^(n_bit-1) - 1 = %d\n", a);
     printf("Stampa 001: %d + 1 = %d\n", a, a+1);
     printf("Stampa 002: %d + 10 = %d\n", a, a+10);
     a = -pow(2, n_bit-1);
+    printf("====> -(2^(n_bit-1)) = %d\n", a);
     printf("Stampa 003: %d - 1 = %d\n", a, a-1);
     printf("Stampa 004: %d - 10 = %d\n", a, a-10);
     
-    printf("\nIl tipo di dato \"uint\" memorizza interi _senza_ segno e occupa %d byte. \"u\" sta per \"unsigned\".\n", sizeof(uint));
-    n_bit = sizeof(uint) * 8; // dimensione in bit
+    printf("\nIl tipo di dato \"unsigned int\" memorizza interi _senza_ segno e occupa %d byte.\n", sizeof(unsigned int));
+    n_bit = sizeof(unsigned int) * 8; // dimensione in bit
     ua = 123;
     printf("Stampa 100: %u + 1 = %u\n", ua, ua+1);
     ua = pow(2, n_bit) - 1;
+    printf("====> 2^(n_bit) - 1 = %u\n", ua);
     printf("Stampa 101: %u + 1 = %u\n", ua, ua+1);
     printf("Stampa 102: %u + 10 = %u\n", ua, ua+10);
     ua = 0;
